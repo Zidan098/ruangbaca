@@ -1,32 +1,49 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="max-w-xl mx-auto w-full">
-    <div class="mb-6 flex items-center justify-between">
+<div class="max-w-xl mx-auto space-y-6">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between">
         <div>
-            <h1 class="text-2xl font-bold">Tambah Kategori Baru</h1>
-            <p class="text-sm text-base-content/70">Buat klasifikasi kategori baru untuk buku</p>
+            <h1 class="text-2xl font-bold text-slate-900">Tambah Kategori Baru</h1>
+            <p class="text-xs text-slate-500">Buat klasifikasi kategori baru untuk pengelompokan buku</p>
         </div>
-        <a href="{{ route('admin.categories.index') }}" class="btn btn-ghost btn-sm">&larr; Kembali</a>
+        <a href="{{ route('admin.categories.index') }}" class="btn btn-sm btn-ghost border border-slate-200 text-xs text-slate-700">
+            &larr; Kembali
+        </a>
     </div>
 
-    <div class="card bg-base-100 shadow-sm border border-base-300 p-6">
-        <form action="{{ route('admin.categories.store') }}" method="POST" class="space-y-4">
+    <!-- Form Card -->
+    <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
+        <form action="{{ route('admin.categories.store') }}" method="POST" class="space-y-4 text-xs">
             @csrf
 
-            <fieldset class="fieldset">
-                <legend class="fieldset-legend">Nama Kategori</legend>
-                <input type="text" name="name" value="{{ old('name') }}" class="input input-bordered w-full @error('name') input-error @enderror" placeholder="Contoh: Pemrograman, Fiksi, Sejarah" required autofocus />
-                @error('name')
-                    <p class="fieldset-label text-error">{{ $message }}</p>
-                @enderror
-            </fieldset>
+            <div class="space-y-1.5">
+                <label class="font-semibold text-slate-700">Nama Kategori Buku <span class="text-error">*</span></label>
+                <input
+                    type="text"
+                    name="name"
+                    value="{{ old('name') }}"
+                    placeholder="Contoh: Pemrograman & Komputer, Fiksi, Sains"
+                    class="input input-bordered input-sm w-full bg-white text-xs @error('name') input-error @enderror"
+                    required
+                    autofocus
+                />
+                @error('name') <span class="text-[11px] text-error">{{ $message }}</span> @enderror
+                <p class="text-[11px] text-slate-400">Slug URL akan dibuat secara otomatis dari nama kategori.</p>
+            </div>
 
-            <div class="pt-4 flex gap-2">
-                <button type="submit" class="btn btn-primary">Simpan Kategori</button>
-                <a href="{{ route('admin.categories.index') }}" class="btn btn-ghost">Batal</a>
+            <div class="pt-4 flex items-center gap-2 border-t border-slate-100">
+                <button type="submit" class="btn btn-primary btn-sm font-semibold shadow-sm px-6">
+                    Simpan Kategori
+                </button>
+                <a href="{{ route('admin.categories.index') }}" class="btn btn-ghost btn-sm text-slate-600">
+                    Batal
+                </a>
             </div>
         </form>
     </div>
+
 </div>
 @endsection

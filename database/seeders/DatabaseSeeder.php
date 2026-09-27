@@ -13,12 +13,12 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'name' => 'Admin Wahyu',
-            'email' => 'admin@wahyustore.com',
+            'name' => 'Admin Ilman',
+            'email' => 'admin@ilmanbookstore.com',
             'password' => Hash::make('password'),
             'role' => 'admin',
-            'phone' => '081234567890',
-            'address' => 'Kantor Pusat WahyuStore, Jakarta'
+            'phone' => '082131223091',
+            'address' => 'Kantor Pusat IlmanBookstore, Jakarta'
         ]);
 
         User::create([
