@@ -37,7 +37,7 @@
                 <form action="{{ route('contact.store') }}" method="POST" class="space-y-4 text-xs">
                     @csrf
 
-                    <div class="space-y-1.5">git
+                    <div class="space-y-1.5">
                         <label class="font-semibold text-slate-700">Subjek Pesan <span class="text-error">*</span></label>
                         <input type="text" name="subject" value="{{ old('subject') }}"
                             placeholder="Contoh: Pertanyaan Ketersediaan Stok Buku Pemrograman"
