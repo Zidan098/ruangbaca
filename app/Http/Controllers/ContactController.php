@@ -27,6 +27,6 @@ class ContactController extends Controller
             'is_read' => false,
         ]);
 
-        return back()->with('success', 'Pesan Anda berhasil dikirim ke Administrator WahyuStore!');
+        return back()->with('success', 'Pesan Anda berhasil dikirim ke Administrator RuangBaca!');
     }
 }

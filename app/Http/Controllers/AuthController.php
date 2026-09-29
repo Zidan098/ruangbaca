@@ -72,7 +72,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('home')->with('success', 'Akun berhasil dibuat! Selamat berbelanja di WahyuStore.');
+        return redirect()->route('home')->with('success', 'Akun berhasil dibuat! Selamat berbelanja di RuangBaca.');
     }
 
     public function logout(Request $request)

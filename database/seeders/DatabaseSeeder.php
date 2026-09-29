@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
         Book::create([
             'category_id' => $cat1->id,
             'title' => 'Mastering Laravel & Modern PHP',
-            'author' => 'Wahyu Hidayat',
+            'author' => 'Hidayat',
             'description' => 'Panduan komprehensif membangun aplikasi web modern, terstruktur, dan scalable dengan ekosistem Laravel terkini.',
             'price' => 125000,
             'stock' => 20,
