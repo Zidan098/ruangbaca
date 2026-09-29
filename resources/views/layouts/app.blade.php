@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $title ?? 'Bacabuku - Toko Buku Online Terlengkap' }}</title>
+    <title>{{ $title ?? 'RuangBaca - Toko Buku Online Terlengkap' }}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,11 +26,11 @@
         <div class="bg-primary text-primary-content text-xs py-2 px-4">
             <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
                 <div class="flex items-center gap-2">
-                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-white/20">INFO</span>
-                    <span>Toko Buku Online Terpercaya — Uji Kompetensi Keahlian (UKK) RPL</span>
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-white/20">RuangBaca</span>
+                    <span>Toko Buku Online Terpercaya</span>
                 </div>
                 <div class="flex items-center gap-4 text-xs opacity-90">
-                    <span>Layanan: 08:00 - 20:00 WIB</span>
+                    <span>Layanan: 08:00 - 18:00 WIB</span>
                     <span class="hidden md:inline">|</span>
                     <span class="hidden md:inline">WhatsApp: 0812-3456-7890</span>
                 </div>
@@ -42,14 +42,12 @@
             <div class="flex items-center justify-between gap-4">
                 <!-- Brand Logo -->
                 <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
-                    <div class="w-10 h-10 rounded-lg bg-primary text-primary-content flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
+                    <div class="w-10 h-10 rounded-lg text-primary-content flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                        <img src="/images/logo.png" alt="">
                     </div>
                     <div>
-                        <span class="text-2xl font-extrabold tracking-tight text-primary">Baca<span class="text-slate-900">buku</span></span>
-                        <span class="block text-[11px] font-medium text-slate-500 -mt-1 tracking-wide">Toko Buku & Referensi Edukasi</span>
+                        <span class="text-2xl font-extrabold tracking-tight text-primary">Ruang<span class="text-slate-900">Baca</span></span>
+                        <span class="block text-[11px] font-medium text-slate-500 -mt-1 tracking-wide">Toko Buku Terlengkap & Terpercaya</span>
                     </div>
                 </a>
 
@@ -261,16 +259,16 @@
                 <div class="space-y-3">
                     <div class="flex items-center gap-2">
                         <div class="w-8 h-8 rounded bg-primary text-primary-content flex items-center justify-center font-bold">
-                            B
+                            <img src="/images/logo.png" alt="">
                         </div>
-                        <span class="text-lg font-bold text-slate-900">Baca<span class="text-primary">buku</span></span>
+                        <span class="text-lg font-bold text-slate-900">Ruang<span class="text-primary">Baca</span></span>
                     </div>
                     <p class="text-slate-500 leading-relaxed">
                         Toko buku daring yang menyediakan buku pendidikan, fiksi, pengembangan diri, dan referensi akademik terlengkap dengan jaminan 100% original.
                     </p>
                     <div class="space-y-1 text-slate-500">
-                        <p>📍 Jl. Salemba Raya No. 45, Jakarta Pusat</p>
-                        <p>📧 redaksi@bacabuku.id</p>
+                        <p>📍 Kampng Jembatan</p>
+                        <p>📧 ruangbaca@gmail.com</p>
                     </div>
                 </div>
 
@@ -281,7 +279,7 @@
                         <li><a href="{{ route('home') }}" class="hover:text-primary transition-colors">Beranda Utama</a></li>
                         <li><a href="{{ route('books.index') }}" class="hover:text-primary transition-colors">Katalog Semua Buku</a></li>
                         <li><a href="{{ route('cart.index') }}" class="hover:text-primary transition-colors">Keranjang Belanja</a></li>
-                        <li><a href="{{ route('about') }}" class="hover:text-primary transition-colors">Tentang Bacabuku</a></li>
+                        <li><a href="{{ route('about') }}" class="hover:text-primary transition-colors">Tentang RuangBaca</a></li>
                         @auth
                             <li><a href="{{ route('contact.index') }}" class="hover:text-primary transition-colors">Hubungi Layanan</a></li>
                         @endauth
@@ -302,19 +300,16 @@
 
                 <!-- Col 4: Pembayaran & Sertifikasi -->
                 <div class="space-y-3">
-                    <h4 class="font-bold text-slate-900 text-sm mb-1">Informasi Uji Kompetensi</h4>
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Kata - kata Hari ini</h4>
                     <div class="bg-slate-50 p-3.5 rounded-lg border border-slate-200 space-y-2">
-                        <span class="badge badge-primary badge-sm font-semibold">UKK RPL 2026</span>
                         <p class="text-[11px] text-slate-500 leading-relaxed">
-                            Aplikasi Toko Buku Bacabuku dirancang dan dibangun untuk memenuhi standar Ujian Kompetensi Keahlian Rekayasa Perangkat Lunak.
+                           "Buku adalah pesawat, kereta api, dan jalan bagi mereka yang ingin bepergian tetapi tidak memiliki modal. Membaca memberi kita tempat untuk pergi ketika kita harus tetap tinggal di tempat kita berada." — Jhumpa Lahiri
                         </p>
                     </div>
                     <div class="pt-1">
                         <span class="text-[11px] font-semibold text-slate-700 block mb-1">Metode Transaksi:</span>
                         <div class="flex flex-wrap gap-1.5">
                             <span class="px-2 py-1 bg-slate-100 rounded border border-slate-200 font-mono text-[10px] font-bold">COD</span>
-                            <span class="px-2 py-1 bg-slate-100 rounded border border-slate-200 font-mono text-[10px] font-bold">TRANSFER</span>
-                            <span class="px-2 py-1 bg-slate-100 rounded border border-slate-200 font-mono text-[10px] font-bold">QRIS</span>
                         </div>
                     </div>
                 </div>
@@ -322,7 +317,7 @@
 
             <!-- Bottom Copyright -->
             <div class="border-t border-slate-200 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px] gap-2">
-                <p>&copy; {{ date('Y') }} Bacabuku Bookstore. Seluruh hak cipta dilindungi.</p>
+                <p>&copy; {{ date('Y') }} RuangBaca Bookstore. Seluruh hak cipta dilindungi.</p>
                 <p>Dibangun dengan Laravel, Tailwind CSS, & daisyUI.</p>
             </div>
         </div>
